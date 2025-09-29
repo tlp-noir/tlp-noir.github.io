@@ -6,72 +6,99 @@
   <title>TLP:Black</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 2rem auto;
-      line-height: 1.6;
-      max-width: 950px;
-      background: #f9fafc;
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f6f9;
       color: #222;
     }
     header {
       text-align: center;
-      padding: 1.5rem;
-      background: linear-gradient(90deg, #111, #444);
+      padding: 3rem 1rem;
+      background: linear-gradient(135deg, #0d0d0d, #3a3a3a);
       color: #fff;
-      border-radius: 12px;
     }
-    h1 {
+    header h1 {
       margin: 0;
-      font-size: 2.2em;
+      font-size: 2.8em;
+      font-weight: 700;
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1.2em;
+      color: #ccc;
+    }
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
     }
     h2 {
       margin-top: 2rem;
-      color: #333;
-      border-bottom: 2px solid #444;
-      padding-bottom: 0.3rem;
+      color: #111;
+      font-size: 1.6em;
+      border-bottom: 3px solid #222;
+      padding-bottom: 0.4rem;
     }
     p, li {
-      font-size: 1.05em;
+      font-size: 1.1em;
+      line-height: 1.7;
     }
     table {
       width: 100%;
       border-collapse: collapse;
-      margin: 1rem 0;
+      margin: 1.5rem 0;
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
     table, th, td {
-      border: 1px solid #ddd;
+      border: none;
     }
     th, td {
-      padding: 0.75rem;
+      padding: 1rem;
       text-align: left;
     }
     th {
-      background-color: #222;
+      background-color: #111;
       color: #fff;
+      font-size: 1.05em;
     }
     tr:nth-child(even) td {
-      background-color: #f3f3f3;
+      background-color: #f0f0f0;
+    }
+    tr:nth-child(odd) td {
+      background-color: #fff;
+    }
+    tr.highlight td {
+      background-color: #0d0d0d;
+      color: #fff;
+      font-weight: bold;
     }
     ul {
       list-style-type: square;
       padding-left: 1.5rem;
     }
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
     .footer {
-      margin-top: 2rem;
-      padding: 1rem;
-      background: #efefef;
-      border-left: 4px solid #222;
-      border-radius: 6px;
+      margin-top: 3rem;
+      padding: 2rem;
+      text-align: center;
+      background: #222;
+      color: #eee;
       font-size: 0.95em;
     }
-    a {
-      color: #0055aa;
+    .footer a {
+      color: #4aa3ff;
       text-decoration: none;
     }
-    a:hover {
+    .footer a:hover {
       text-decoration: underline;
     }
   </style>
@@ -82,83 +109,94 @@
     <p>The highest level of confidentiality in the Traffic Light Protocol</p>
   </header>
 
-  <h2>About</h2>
-  <p>
-    <strong>TLP:Black</strong> is an extension of the Traffic Light Protocol (TLP) designed for scenarios where
-    information must remain <em>strictly confined</em> to a curated, invitation-only group of participants. Unlike TLP:Red,
-    which allows any attendee in a session to receive the information, TLP:Black ensures that both <em>attendance</em> and
-    <em>dissemination</em> are tightly controlled.
-  </p>
+  <main>
+    <div class="card">
+      <h2>About</h2>
+      <p>
+        <strong>TLP:Black</strong> is the newest extension of the Traffic Light Protocol (TLP), created for scenarios where
+        information must remain <em>strictly confined</em> to a curated, invitation-only group of participants. Unlike TLP:Red,
+        which allows any attendee in a session to receive the information, TLP:Black ensures that both <em>attendance</em> and
+        <em>dissemination</em> are tightly controlled.
+      </p>
+    </div>
 
-  <h2>Definition</h2>
-  <p>
-    Information marked as <strong>TLP:Black</strong> is disclosed only to explicitly invited participants. No redistribution is
-    permitted, and access to the discussion or room itself is restricted by invitation. This provides the highest level
-    of confidentiality within the TLP model.
-  </p>
+    <div class="card">
+      <h2>Definition</h2>
+      <p>
+        Information marked as <strong>TLP:Black</strong> is disclosed only to explicitly invited participants. No redistribution is
+        permitted, and access to the discussion or room itself is restricted by invitation. This provides the highest level
+        of confidentiality within the TLP model.
+      </p>
+    </div>
 
-  <h2>Comparison Table</h2>
-  <table>
-    <tr>
-      <th>TLP Category</th>
-      <th>Definition</th>
-      <th>Who Can Receive</th>
-      <th>Dissemination Boundary</th>
-      <th>Access Control Model</th>
-    </tr>
-    <tr>
-      <td>TLP:White</td>
-      <td>Information may be shared freely.</td>
-      <td>Anyone</td>
-      <td>Public / unrestricted</td>
-      <td>Open</td>
-    </tr>
-    <tr>
-      <td>TLP:Green</td>
-      <td>Information may be shared within the community or sector.</td>
-      <td>Trusted community members</td>
-      <td>Community-wide</td>
-      <td>Membership/sector affiliation</td>
-    </tr>
-    <tr>
-      <td>TLP:Amber</td>
-      <td>Information may be shared within the recipient’s organization on a need-to-know basis.</td>
-      <td>Recipient + colleagues with legitimate role</td>
-      <td>Internal to the organization</td>
-      <td>Organization membership</td>
-    </tr>
-    <tr>
-      <td>TLP:Red</td>
-      <td>Information may be shared only with individuals present at the disclosure.</td>
-      <td>All individuals in the room/session</td>
-      <td>Room-bounded (no propagation)</td>
-      <td>Open attendance</td>
-    </tr>
-    <tr style="background-color:#111; color:#fff; font-weight:bold;">
-      <td>TLP:Black</td>
-      <td>Information may be shared strictly within an invitation-only group. No redistribution permitted.</td>
-      <td>Only explicitly invited participants</td>
-      <td>Invite-only circle</td>
-      <td>Curated attendance</td>
-    </tr>
-  </table>
+    <div class="card">
+      <h2>Comparison Table</h2>
+      <table>
+        <tr>
+          <th>TLP Category</th>
+          <th>Definition</th>
+          <th>Who Can Receive</th>
+          <th>Dissemination Boundary</th>
+          <th>Access Control Model</th>
+        </tr>
+        <tr>
+          <td>TLP:White</td>
+          <td>Information may be shared freely.</td>
+          <td>Anyone</td>
+          <td>Public / unrestricted</td>
+          <td>Open</td>
+        </tr>
+        <tr>
+          <td>TLP:Green</td>
+          <td>Information may be shared within the community or sector.</td>
+          <td>Trusted community members</td>
+          <td>Community-wide</td>
+          <td>Membership/sector affiliation</td>
+        </tr>
+        <tr>
+          <td>TLP:Amber</td>
+          <td>Information may be shared within the recipient’s organization on a need-to-know basis.</td>
+          <td>Recipient + colleagues with legitimate role</td>
+          <td>Internal to the organization</td>
+          <td>Organization membership</td>
+        </tr>
+        <tr>
+          <td>TLP:Red</td>
+          <td>Information may be shared only with individuals present at the disclosure.</td>
+          <td>All individuals in the room/session</td>
+          <td>Room-bounded (no propagation)</td>
+          <td>Open attendance</td>
+        </tr>
+        <tr class="highlight">
+          <td>TLP:Black</td>
+          <td>Information may be shared strictly within an invitation-only group. No redistribution permitted.</td>
+          <td>Only explicitly invited participants</td>
+          <td>Invite-only circle</td>
+          <td>Curated attendance</td>
+        </tr>
+      </table>
+    </div>
 
-  <h2>Use Cases</h2>
-  <ul>
-    <li>Closed-door incident coordination between select CSIRTs.</li>
-    <li>Briefings with law enforcement or regulators under strict confidentiality.</li>
-    <li>Pre-release vulnerability disclosures shared with vetted experts.</li>
-    <li>Executive-level strategy sessions requiring absolute trust.</li>
-  </ul>
+    <div class="card">
+      <h2>Use Cases</h2>
+      <ul>
+        <li>Closed-door incident coordination between select CSIRTs.</li>
+        <li>Briefings with law enforcement or regulators under strict confidentiality.</li>
+        <li>Pre-release vulnerability disclosures shared with vetted experts.</li>
+        <li>Executive-level strategy sessions requiring absolute trust.</li>
+      </ul>
+    </div>
+  </main>
 
   <div class="footer">
-    <p><strong>References:</strong></p>
-    <ol>
+    <p><strong>References</strong></p>
+    <ol style="text-align:left; display:inline-block;">
       <li>FIRST. (2022). <em>Traffic Light Protocol (TLP) v2.0</em>. <a href="https://www.first.org/tlp/">https://www.first.org/tlp/</a></li>
       <li>TF-CSIRT. (n.d.). <em>Information sharing principles</em>. <a href="https://www.trustedintroducer.org/">https://www.trustedintroducer.org/</a></li>
       <li>FS-ISAC. (2019). <em>Member information handling guidelines</em>. <a href="https://www.fsisac.com/">https://www.fsisac.com/</a></li>
       <li>ENISA. (2017). <em>Information Sharing and Analysis Centers (ISACs) - Cooperative models</em>. <a href="https://www.enisa.europa.eu/">https://www.enisa.europa.eu/</a></li>
     </ol>
+    <p style="margin-top:1rem;">© 2025 TLP:Black — All Rights Reserved</p>
   </div>
 </body>
 </html>
