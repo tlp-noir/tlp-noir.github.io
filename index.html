@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TLP:Black Proposal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      line-height: 1.6;
+      max-width: 900px;
+    }
+    h1, h2 {
+      color: #222;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .footer {
+      margin-top: 2rem;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>TLP:Black — An Invitation-Only Extension to the Traffic Light Protocol</h1>
+
+  <h2>Abstract</h2>
+  <p>
+    The Traffic Light Protocol (TLP) has become a globally recognized standard for information sensitivity marking.
+    This article proposes an extension, <strong>TLP:Black</strong>, to address scenarios where access is restricted not only
+    by dissemination boundaries but also by <em>audience selection at the point of disclosure</em>. TLP:Black formalizes
+    invitation-only trust circles, differentiating itself from TLP:Red by making audience pre-selection a defining
+    characteristic.
+  </p>
+
+  <h2>Definition</h2>
+  <p><strong>TLP:Black:</strong> Information is disclosed strictly to an <em>invitation-only</em> group of participants. The information must not be shared outside the room, and access to the room itself is determined by explicit invitation. No redistribution is permitted.</p>
+
+  <h2>Comparison Table</h2>
+  <table>
+    <tr>
+      <th>TLP Category</th>
+      <th>Definition</th>
+      <th>Who Can Receive</th>
+      <th>Dissemination Boundary</th>
+      <th>Access Control Model</th>
+    </tr>
+    <tr>
+      <td>TLP:White</td>
+      <td>Information may be shared freely.</td>
+      <td>Anyone</td>
+      <td>Public / unrestricted</td>
+      <td>Open</td>
+    </tr>
+    <tr>
+      <td>TLP:Green</td>
+      <td>Information may be shared within the community or sector.</td>
+      <td>Trusted community members</td>
+      <td>Community-wide</td>
+      <td>Membership/sector affiliation</td>
+    </tr>
+    <tr>
+      <td>TLP:Amber</td>
+      <td>Information may be shared within the recipient’s organization on a need-to-know basis.</td>
+      <td>Recipient + colleagues with legitimate role</td>
+      <td>Internal to the organization</td>
+      <td>Organization membership</td>
+    </tr>
+    <tr>
+      <td>TLP:Red</td>
+      <td>Information may be shared only with individuals present at the disclosure.</td>
+      <td>All individuals in the room/session</td>
+      <td>Room-bounded (no propagation)</td>
+      <td>Open attendance</td>
+    </tr>
+    <tr>
+      <td><strong>TLP:Black (proposed)</strong></td>
+      <td>Information may be shared strictly within an invitation-only group. No redistribution permitted.</td>
+      <td>Only explicitly invited participants</td>
+      <td>Invite-only circle</td>
+      <td>Curated attendance</td>
+    </tr>
+  </table>
+
+  <div class="footer">
+    <p><strong>References:</strong></p>
+    <ol>
+      <li>FIRST. (2022). <em>Traffic Light Protocol (TLP) v2.0</em>. <a href="https://www.first.org/tlp/">https://www.first.org/tlp/</a></li>
+      <li>TF-CSIRT. (n.d.). <em>Information sharing principles</em>. <a href="https://www.trustedintroducer.org/">https://www.trustedintroducer.org/</a></li>
+      <li>FS-ISAC. (2019). <em>Member information handling guidelines</em>. <a href="https://www.fsisac.com/">https://www.fsisac.com/</a></li>
+      <li>Hausken, K., & Levitin, G. (2012). <em>Information sharing among competing firms and cyberattack protection</em>. European Journal of Operational Research, 222(3), 591–600.</li>
+      <li>ENISA. (2017). <em>Information Sharing and Analysis Centers (ISACs) - Cooperative models</em>. <a href="https://www.enisa.europa.eu/">https://www.enisa.europa.eu/</a></li>
+    </ol>
+  </div>
+</body>
+</html>
