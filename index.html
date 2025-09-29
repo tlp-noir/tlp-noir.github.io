@@ -3,53 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TLP:Black Proposal</title>
+  <title>TLP:Black</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 2rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 2rem auto;
       line-height: 1.6;
-      max-width: 900px;
-    }
-    h1, h2 {
+      max-width: 950px;
+      background: #f9fafc;
       color: #222;
+    }
+    header {
+      text-align: center;
+      padding: 1.5rem;
+      background: linear-gradient(90deg, #111, #444);
+      color: #fff;
+      border-radius: 12px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.2em;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #333;
+      border-bottom: 2px solid #444;
+      padding-bottom: 0.3rem;
+    }
+    p, li {
+      font-size: 1.05em;
     }
     table {
       width: 100%;
       border-collapse: collapse;
       margin: 1rem 0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
     table, th, td {
-      border: 1px solid #ccc;
+      border: 1px solid #ddd;
     }
     th, td {
-      padding: 0.5rem;
+      padding: 0.75rem;
       text-align: left;
     }
     th {
-      background-color: #f2f2f2;
+      background-color: #222;
+      color: #fff;
+    }
+    tr:nth-child(even) td {
+      background-color: #f3f3f3;
+    }
+    ul {
+      list-style-type: square;
+      padding-left: 1.5rem;
     }
     .footer {
       margin-top: 2rem;
-      font-size: 0.9em;
-      color: #555;
+      padding: 1rem;
+      background: #efefef;
+      border-left: 4px solid #222;
+      border-radius: 6px;
+      font-size: 0.95em;
+    }
+    a {
+      color: #0055aa;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1>TLP:Black — An Invitation-Only Extension to the Traffic Light Protocol</h1>
+  <header>
+    <h1>TLP:Black</h1>
+    <p>The highest level of confidentiality in the Traffic Light Protocol</p>
+  </header>
 
-  <h2>Abstract</h2>
+  <h2>About</h2>
   <p>
-    The Traffic Light Protocol (TLP) has become a globally recognized standard for information sensitivity marking.
-    This article proposes an extension, <strong>TLP:Black</strong>, to address scenarios where access is restricted not only
-    by dissemination boundaries but also by <em>audience selection at the point of disclosure</em>. TLP:Black formalizes
-    invitation-only trust circles, differentiating itself from TLP:Red by making audience pre-selection a defining
-    characteristic.
+    <strong>TLP:Black</strong> is an extension of the Traffic Light Protocol (TLP) designed for scenarios where
+    information must remain <em>strictly confined</em> to a curated, invitation-only group of participants. Unlike TLP:Red,
+    which allows any attendee in a session to receive the information, TLP:Black ensures that both <em>attendance</em> and
+    <em>dissemination</em> are tightly controlled.
   </p>
 
   <h2>Definition</h2>
-  <p><strong>TLP:Black:</strong> Information is disclosed strictly to an <em>invitation-only</em> group of participants. The information must not be shared outside the room, and access to the room itself is determined by explicit invitation. No redistribution is permitted.</p>
+  <p>
+    Information marked as <strong>TLP:Black</strong> is disclosed only to explicitly invited participants. No redistribution is
+    permitted, and access to the discussion or room itself is restricted by invitation. This provides the highest level
+    of confidentiality within the TLP model.
+  </p>
 
   <h2>Comparison Table</h2>
   <table>
@@ -88,8 +134,8 @@
       <td>Room-bounded (no propagation)</td>
       <td>Open attendance</td>
     </tr>
-    <tr>
-      <td><strong>TLP:Black (proposed)</strong></td>
+    <tr style="background-color:#111; color:#fff; font-weight:bold;">
+      <td>TLP:Black</td>
       <td>Information may be shared strictly within an invitation-only group. No redistribution permitted.</td>
       <td>Only explicitly invited participants</td>
       <td>Invite-only circle</td>
@@ -97,13 +143,20 @@
     </tr>
   </table>
 
+  <h2>Use Cases</h2>
+  <ul>
+    <li>Closed-door incident coordination between select CSIRTs.</li>
+    <li>Briefings with law enforcement or regulators under strict confidentiality.</li>
+    <li>Pre-release vulnerability disclosures shared with vetted experts.</li>
+    <li>Executive-level strategy sessions requiring absolute trust.</li>
+  </ul>
+
   <div class="footer">
     <p><strong>References:</strong></p>
     <ol>
       <li>FIRST. (2022). <em>Traffic Light Protocol (TLP) v2.0</em>. <a href="https://www.first.org/tlp/">https://www.first.org/tlp/</a></li>
       <li>TF-CSIRT. (n.d.). <em>Information sharing principles</em>. <a href="https://www.trustedintroducer.org/">https://www.trustedintroducer.org/</a></li>
       <li>FS-ISAC. (2019). <em>Member information handling guidelines</em>. <a href="https://www.fsisac.com/">https://www.fsisac.com/</a></li>
-      <li>Hausken, K., & Levitin, G. (2012). <em>Information sharing among competing firms and cyberattack protection</em>. European Journal of Operational Research, 222(3), 591–600.</li>
       <li>ENISA. (2017). <em>Information Sharing and Analysis Centers (ISACs) - Cooperative models</em>. <a href="https://www.enisa.europa.eu/">https://www.enisa.europa.eu/</a></li>
     </ol>
   </div>
